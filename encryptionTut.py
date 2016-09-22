@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+#! /usr/bin/python
+
+>>>>>>> 9fe22a613d62bab23b10ac5687eb6daef369c716
 from Crypto.Cipher import AES
 import base64
 import os, random
