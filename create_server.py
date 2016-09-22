@@ -4,14 +4,21 @@ import os
 import pyrax
 import sys
 
+if sys.stdin == "":
+    print 'nothing on stdin'
+else:
+    print str(sys.stdin[1])
+
 sys.argv=""
 print 'Number of arguments:', len(sys.argv), 'arguments.'
 print 'Argument List:', str(sys.argv)
 
-if sys.argv == "":
+if sys.argv == "" and sys.stdin == "":
     server_name = raw_input("Enter a name for the server: ")
     print ("You entered " + server_name)
-else:
+elif sys.argv == "":
+    server_name = sys.stdin[1]
+elif sys.stdin == "":
     server_name = sys.argv[1]
 
 creds_file = os.path.expanduser("~/.rackspace_cloud_credentials")
