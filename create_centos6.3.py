@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#This code uses Pyrax and is from Rackspace.
 
 import os
 import pyrax
